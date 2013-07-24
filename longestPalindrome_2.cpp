@@ -1,4 +1,4 @@
-// longestPalindrome_2.cpp : Defines the entry point for the console application.
+// longestPalindrome_2.cpp : better space
 //
 
 #include "stdafx.h"
