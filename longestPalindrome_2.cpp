@@ -1,4 +1,4 @@
-// longestPalindrome_2.cpp : better space
+// longestPalindrome_2.cpp : space efficient
 //
 
 #include "stdafx.h"
@@ -7,15 +7,13 @@
 
 using namespace std;
 
-string expandCenter(string s, int c1, int c2) {
-//	string longest;
-	int l = c1; int r = c2;
+string expandCenter(string s, int l, int r) {
 	int n = s.length();
 	while (l >= 0 && r <= n - 1 && s[l] == s[r]) {
 		l--;
 		r++;
 	}
-	return s.substr(l+1, r-l-1);
+	return s.substr(l+1, r-l-1); //important
 }
 
 string longestPalindrome(string s) {
@@ -38,11 +36,11 @@ string longestPalindrome(string s) {
 int main( )
 {
 	while(true) {
-	cout << "please input a string:";
-	string s;
-	getline(cin, s);
-	string palin = longestPalindrome(s);
-	cout << "\n" << "the longest palindrome is: " << palin << endl;
+		cout << "please input a string:";
+		string s;
+		getline(cin, s);
+		string palin = longestPalindrome(s);
+		cout << "\n" << "the longest palindrome is: " << palin << endl;
 	
 	}
 	return 0;
